@@ -1,35 +1,41 @@
+
 <!DOCTYPE html>
-<html lang="en"></html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrameFinder</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
         <h1>FrameFinder</h1>
         <p>Find images that inspire you.</p>
     </header>
+
     <main>
-        <form>
+        <form id="search-form">
             <label for="search-input" class="sr-only">Search images</label>
-            <input type="search" id="search-input" placeholder="Search images...">
+            <input
+                type="search"
+                id="search-input"
+                placeholder="Search images..."
+            >
             <button type="submit" id="search-button">Search</button>
         </form>
-        <div class="categories">
-            <button type="submit">Nature</button>
-            <button type="submit">Animals</button>
-            <button type="submit">Travel</button>
+
+        <div class="categories" aria-label="Image categories">
+            <button type="button" class="category-button">Nature</button>
+            <button type="button" class="category-button">Animals</button>
+            <button type="button" class="category-button">Travel</button>
         </div>
 
         <p id="status">0 images found</p>
+        <p class="empty-message">Search for something to get started.</p>
 
-        <section id="results" aria-label="Image search results">
-            <p class ="empty-message">Search for something to get started.</p>
-        </section>
+        <section id="results" aria-label="Image search results"></section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
